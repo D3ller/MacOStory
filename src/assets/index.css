@@ -12,4 +12,9 @@
   cursor: url('../../public/icon/cursor.svg'), pointer;
 }
 
+img {
+  user-select: none;
+  -moz-user-select: none;
+    -webkit-user-select: none;
+}
 
