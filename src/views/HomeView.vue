@@ -81,6 +81,7 @@ const handleDragOver = (event) => {
   grid-template-rows: repeat(auto-fill, 70px);
   column-gap: 10px;
   padding: 2px;
+  @apply mt-7
 }
 
 .grid-cell {

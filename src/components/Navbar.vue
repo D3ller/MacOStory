@@ -1,5 +1,30 @@
 <script setup>
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
+import { Icon } from '@iconify/vue'
+import {
+  MenubarCheckboxItem,
+  MenubarContent,
+  MenubarItem,
+  MenubarItemIndicator,
+  MenubarMenu,
+  MenubarPortal,
+  MenubarRadioGroup,
+  MenubarRadioItem,
+  MenubarRoot,
+  MenubarSeparator,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarTrigger,
+} from 'radix-vue'
+
+const currentMenu = ref('')
+const checkboxOne = ref(false)
+const checkboxTwo = ref(false)
+const person = ref('pedro')
+function handleClick() {
+  alert('hello!')
+}
 
 var icons = ref([
   {id: 1, name: 'App 1', src: '/app/message.png'},
@@ -7,6 +32,10 @@ var icons = ref([
   {id: 3, name: 'Maps', src: '/app/geolocalisation.png'},
   {id: 4, name: 'App 4', src: '/app/music-2021-05-25.png'},
 ])
+
+onMounted(() => {
+  let date = new Date.now().toString()
+})
 
 </script>
 
