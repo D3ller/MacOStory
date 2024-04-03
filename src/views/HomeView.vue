@@ -23,15 +23,19 @@
 import { ref } from 'vue';
 
 const apps = [
-  { id: 1, name: 'App 1', src: '/app/message.png' },
-  { id: 2, name: 'App 2', src: '/app/photo.png' },
+  { id: 1, name: 'Safari', src: '/app/safari-2021-06-02.png' },
+  { id: 2, name: 'Calculator', src: '/app/calculator-2021-04-29.png' },
   {id: 3, name: 'Maps', src: '/app/maps.png'},
+  {id: 4, name: 'Notes', src: '/app/notes-2021-05-25.png'},
+  {id: 5, name: 'Systeme', src: '/app/system-preferences-2021-06-03.png'}
 ];
 
 const appPositions = {
   1: 0,
   2: 1,
   3: 2,
+  4: 3,
+  5: 4
 };
 
 const gridCells = ref(Array.from({ length: 128 }, (_, index) => ({
