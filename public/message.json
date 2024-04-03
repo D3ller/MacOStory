@@ -1,0 +1,104 @@
+{
+  "dialogue": [
+    {
+      "speaker": "Arthur",
+      "text": "C'était vraiment une soirée de dingue hier !"
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Euh, quelle soirée ?"
+    },
+    {
+      "speaker": "Arthur",
+      "text": "T'as carrément abusé sur la bouteille toi ."
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Ha ha, très drôle, mais sérieux, j'étais chez moi hier soir."
+    },
+    {
+      "speaker": "Emma",
+      "text": "Hé, qu'est-ce que tu fais ? Je t'attends."
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Hein ? Tu m'attends ?"
+    },
+    {
+      "speaker": "Emma",
+      "text": "Ben oui, tu m'avais proposé d'aller voir Dune 2, t'as oublié ?"
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Attends, mais je t'ai proposé ça quand ?"
+    },
+    {
+      "speaker": "Emma",
+      "text": "Vendredi, en sortant des cours."
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Mais c'est pas possible, j'étais malade, j'ai passé ma journée au lit."
+    },
+    {
+      "speaker": "Emma",
+      "text": "Tu me poses vraiment un lapin ?"
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Mais c'est impossible, tu as pris une vieille photo."
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Mec, c'était pas moi, il se passe des trucs vraiment bizarres."
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Vérifie ces photos et sa localisation."
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Mec Y a des photos que j'ai jamais prise, et j'ai une deuxième localisation qui vient d'apparaître sur mon ordi à côté de la mienne."
+    },
+    {
+      "speaker": "Arthur",
+      "text": "Ça doit être un bug."
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Il y a du bruit devant chez moi"
+    },
+    {
+      "speaker": "Arthur",
+      "text": "Ah ah, très drôle."
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Je rigole pas, je suis sérieux."
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Putain, c'est quoi cette ce bordel ?"
+    },
+    {
+      "speaker": "Arthur",
+      "text": "Arrête ça, ça commence à me faire flipper."
+    },
+    {
+      "speaker": "Thomas",
+      "text": "Je rigole pas, y a un mec qui me ressemble comme deux gouttes d'eau devant ma porte, il a la même voix et il tente d'entrer."
+    },
+    {
+      "speaker": "Arthur",
+      "text": "Thomas, t'es là ? il se passe quoi ?"
+    },
+    {
+      "speaker": "Thomas",
+      "text": "*Crie* Il est rentré ! *Bruit de coupure téléphone*"
+    },
+    {
+      "speaker": "Arthur",
+      "text": "Allo, Thomas, t'es là ? Allo ! Oh putain, répond, putain de merde, j'arrive."
+    }
+  ]
+}
