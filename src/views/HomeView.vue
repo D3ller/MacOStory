@@ -1,6 +1,4 @@
 <template>
-  <Finder window_name="default name">
-  </Finder>
   <div class="grids">
     <div
         v-for="cell in gridCells"

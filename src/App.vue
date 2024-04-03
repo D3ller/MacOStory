@@ -4,8 +4,11 @@ import Navbar from "@/components/Navbar.vue";
 </script>
 
 <template>
-  <div class="ubuntu">
+
+  <div class="flex w-full justify-center">
+  <div class="ubuntu min-w-[380px]">
   <RouterView />
+  </div>
   </div>
 
   <Navbar></Navbar>
