@@ -6,6 +6,8 @@
 
 * {
   cursor: url('../../public/icon/cursor.svg'), auto;
+  padding: 0;
+  margin: 0;
 }
 
 *:hover {

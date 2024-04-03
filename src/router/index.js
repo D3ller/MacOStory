@@ -11,7 +11,7 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path:'/imessage',
+      path:'/imessage/:id',
       name: 'imessage',
       component: IMessage
     }
