@@ -1,4 +1,6 @@
 <template>
+  <Finder window_name="default name">
+  </Finder>
   <div class="grids">
     <div
         v-for="cell in gridCells"
@@ -21,6 +23,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import Finder from '@/components/Finder.vue';
 
 const apps = [
   { id: 1, name: 'Safari', src: '/app/safari-2021-06-02.png' },
