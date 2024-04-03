@@ -14,7 +14,7 @@ import Navbar from "@/components/Navbar.vue";
 <style lang="postcss" scoped>
 
 .ubuntu {
-  @apply min-h-screen px-2 py-4;
+  @apply min-h-screen px-2 py-4 overflow-x-hidden;
   background: url("../public/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-3840x2160-1455.jpg");
   background-size: cover;
 }

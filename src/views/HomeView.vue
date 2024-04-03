@@ -34,7 +34,7 @@ const appPositions = {
   3: 2,
 };
 
-const gridCells = ref(Array.from({ length: 96 }, (_, index) => ({
+const gridCells = ref(Array.from({ length: 128 }, (_, index) => ({
   id: index,
   app: null,
 })));
@@ -72,14 +72,14 @@ const handleDragOver = (event) => {
 <style lang="postcss" scoped>
 .grids {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 70px); /* crée autant de colonnes de 50px que possible */
-  grid-template-rows: repeat(auto-fill, 70px); /* crée autant de lignes de 50px que possible */
+  grid-template-columns: repeat(auto-fill, 70px);
+  grid-template-rows: repeat(auto-fill, 70px);
   column-gap: 10px;
   padding: 2px;
 }
 
 .grid-cell {
-  @apply w-[4rem] h-[4rem] flex justify-center items-center justify-items-center;
+  @apply w-[64px] h-[64px] flex justify-center items-center justify-items-center;
 }
 
 .app img:active {
