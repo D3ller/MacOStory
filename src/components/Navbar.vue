@@ -28,7 +28,7 @@ function handleClick() {
 }
 
 var icons = ref([
-  {id: 1, name: 'message', src: '/app/message.png'},
+  {id: 1, name: 'imessage_contact', src: '/app/message.png'},
   {id: 2, name: 'photo', src: '/app/photo.png'},
   {id: 3, name: 'localization', src: '/app/geolocalisation.png'},
   {id: 4, name: 'music', src: '/app/music-2021-05-25.png'},

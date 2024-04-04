@@ -1,9 +1,9 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import {onMounted, ref, watch} from 'vue';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-// Importez votre image de marqueur personnalisée
 import customMarkerImg from '/public/Iphone.png';
+import store from '@/store.js';
 
 const mapContainer = ref(null);
 
@@ -14,17 +14,22 @@ onMounted(() => {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  // Création de l'objet Icon personnalisé
   const customIcon = L.icon({
     iconUrl: customMarkerImg,
     iconSize: [45],
     iconAnchor: [22, 94],
-    popupAnchor: [-3, -76] // L'endroit où la popup se relie à l'icône
+    popupAnchor: [-3, -76]
   });
 
   L.marker([48.2973451, 4.0744009], { icon: customIcon }).addTo(map)
       .bindPopup('Votre Iphone')
       .openPopup();
+
+ if(store.seeLocalizations && store.seePhoto) {
+      L.marker([48.2972451, 4.0744009], { icon: customIcon }).addTo(map)
+          .bindPopup('Votre Iphone (1)')
+          .openPopup();
+ }
 });
 </script>
 
@@ -64,11 +69,23 @@ onMounted(() => {
       <h2 class="m-0 font-Poppins text-[14px]">Iphone de Thomas</h2>
       <p class="m-0 font-Poppins text-[12px] text-[#717171]">Cet iPhone</p>
       </div>
+        <p class="m-0 font-Poppins text-[12px] text-[#717171]">Avec vous</p>
+      </div>
+    </div>
 
-      <p class="m-0 font-Poppins text-[12px] text-[#717171]">Avec vous</p>
+
+    <div class="p-2">
+        <div v-if="store.seeLocalizations && store.seePhoto" class="flex justify-between px-1 items-center">
+          <img class="w-8 h-8" src="/RoundedPhone.png" alt="">
+          <div class="flex flex-col">
+            <h2 class="m-0 font-Poppins text-[14px]">Iphone de Thomas (1)</h2>
+            <p class="m-0 font-Poppins text-[12px] text-[#717171]">Cet iPhone</p>
+        </div>
+          <p class="m-0 font-Poppins text-[12px] text-[#717171]">A vos cotés</p>
+        </div>
+
       </div>
       
-    </div>
   </div>
   <div class="absolute w-full bg-white border-t-1 border-[#c0c2c3] h-[60px] bottom-0 flex justify-around items-end pb-[20px]">
     <div class="flex flex-col items-center justify-center">

@@ -1,7 +1,7 @@
 <template>
-  <header class="flex justify-between items-center px-2">
+  <header class="flex font-Poppins justify-between items-center px-2">
     <div>
-      <b>9:41</b>
+      <b class="text-[14px]">9:41</b>
     </div>
     <div class="top_right flex">
       <div>
