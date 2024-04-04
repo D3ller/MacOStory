@@ -17,6 +17,7 @@ import {
   MenubarSubTrigger,
   MenubarTrigger,
 } from 'radix-vue'
+import router from "@/router/index.js";
 
 const currentMenu = ref('')
 const checkboxOne = ref(false)
@@ -27,22 +28,17 @@ function handleClick() {
 }
 
 var icons = ref([
-  {id: 1, name: 'App 1', src: '/app/message.png'},
-  {id: 2, name: 'App 2', src: '/app/photo.png'},
-  {id: 3, name: 'Maps', src: '/app/geolocalisation.png'},
-  {id: 4, name: 'App 4', src: '/app/music-2021-05-25.png'},
+  {id: 1, name: 'message', src: '/app/message.png'},
+  {id: 2, name: 'photo', src: '/app/photo.png'},
+  {id: 3, name: 'localization', src: '/app/geolocalisation.png'},
+  {id: 4, name: 'music', src: '/app/music-2021-05-25.png'},
 ])
-
-onMounted(() => {
-  let date = new Date.now().toString()
-})
-
 </script>
 
 <template>
   <div class="absolute bottom-5 left-0 right-0 m-auto flex justify-center items-center w-full">
 <nav class="relative dock h-[70px] w-[250px] bg-white">
-  <div v-for="icon in icons" :key="icon.id" class="app">
+  <div v-for="icon in icons" :key="icon.id" class="app" @click="router.push({ name: icon.name })">
     <img class="w-[57px] h-[57px]" :src="icon.src" :alt="icon.name">
   </div>
 </nav>
@@ -64,9 +60,5 @@ onMounted(() => {
   margin: 0 .3rem;
   cursor: pointer;
   transition: transform .3s ease;
-}
-
-.dock .app:hover {
-  transform: scale(2);
 }
 </style>

@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap')
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/*replace the cursor by another image*/
+@font-face {
+  font-family: 'Noto Color Emoji';
+  src: url('../../public/NotoColorEmoji.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 * {
   cursor: url('../../public/icon/cursor.svg'), auto;

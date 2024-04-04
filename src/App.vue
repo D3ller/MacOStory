@@ -16,5 +16,4 @@ import Top from "@/components/Top.vue";
 
 <style lang="postcss" scoped>
 
-
 </style>

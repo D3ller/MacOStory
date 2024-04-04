@@ -1,4 +1,5 @@
 <template>
+  <div class="bg-ios">
   <div class="grids">
     <div
         v-for="cell in gridCells"
@@ -12,18 +13,22 @@
           draggable="true"
           @dragstart="handleDragStart(cell, $event)"
           class="app"
+          @click="router.push({ name: cell.app.name})"
       >
         <img :src="cell.app.src" :alt="cell.app.name">
       </div>
     </div>
   </div>
+
   <Navbar></Navbar>
+  </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import Finder from '@/components/Finder.vue';
 import Navbar from "@/components/Navbar.vue";
+import router from "@/router/index.js";
 
 const apps = [
   { id: 1, name: 'Safari', src: '/app/safari-2021-06-02.png' },
@@ -83,14 +88,25 @@ const handleDragOver = (event) => {
   grid-template-rows: repeat(auto-fill, 70px);
   column-gap: 10px;
   padding: 2px;
-  @apply mt-7
 }
 
 .grid-cell {
-  @apply w-[64px] h-[64px] flex justify-center items-center justify-items-center;
+  @apply w-[64px] h-[64px] flex justify-center items-center justify-items-center relative;
+}
+
+.app {
+  @apply w-full h-full rounded-[5px] flex justify-center items-center relative;
+}
+
+.app img {
+  @apply w-full h-full;
 }
 
 .app img:active {
   @apply cursor-move;
+}
+
+.bg-ios {
+  background-image: url("/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-3840x2160-1455.jpg");
 }
 </style>

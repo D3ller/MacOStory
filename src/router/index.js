@@ -20,7 +20,7 @@ const router = createRouter({
       path:'/imessage/:id',
       name: 'imessage',
       component: IMessage
-    },
+    }
   ]
 })
 
