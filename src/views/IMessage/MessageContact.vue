@@ -1,8 +1,8 @@
 <template>
-  <header>
+  <header class="font-Poppins px-3">
     <nav class="flex justify-between my-3">
-      <div class="text-[#3478F6]">
-        <a href="#">Edit</a>
+      <div>
+        <a href="#" class="edit text-[#3478F6] "><b>Edit</b></a>
       </div>
       <div>
         <p>
@@ -36,6 +36,13 @@
     <Contact nom="Test"/>
   </div>
 </template>
+
 <script setup>
 import Contact from "@/components/IMessage/Contact.vue";
 </script>
+
+<style scoped>
+.edit {
+  text-decoration: none;
+}
+</style>
