@@ -46,7 +46,7 @@ onMounted(() => {
 
   <div class="w-full h-[calc(100%-275px)] absolute z-0" ref="mapContainer"></div>
 
-  <div class="absolute w-full bg-white h-[220px] bottom-[60px] rounded-tl-[10px] rounded-tr-[10px] z-10">
+  <div class="absolute w-full bg-white h-[220px] bottom-[70px] rounded-tl-[10px] rounded-tr-[10px] z-10">
     <div class="flex justify-between items-center p-2.5">
     <h1 class="font-Poppins font-bold text-lg m-0">Appareils</h1>
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@ onMounted(() => {
       
     </div>
   </div>
-  <div class="absolute w-full bg-white border-t-1 border-[#c0c2c3] h-[60px] bottom-0 flex justify-around items-end pb-[10px]">
+  <div class="absolute w-full bg-white border-t-1 border-[#c0c2c3] h-[60px] bottom-0 flex justify-around items-end pb-[20px]">
     <div class="flex flex-col items-center justify-center">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="#717171" xmlns="http://www.w3.org/2000/svg">
           <path fill="#717171" d="M13.165 24.3067C13.7451 24.3067 14.167 23.9376 14.167 23.2432V16.502C14.167 16.2032 14.3076 16.0274 14.5449 16.0274C14.7822 16.0274 14.9316 16.2032 14.9316 16.502V23.2432C14.9316 23.9376 15.3535 24.3067 15.9336 24.3067C16.5049 24.3067 16.9268 23.9376 16.9268 23.2432V11.8526C16.9268 11.6153 17.041 11.4747 17.2344 11.4747C17.4189 11.4747 17.542 11.6153 17.542 11.8526V16.5284C17.542 17.1524 17.9111 17.504 18.4385 17.504C18.9658 17.504 19.3262 17.1524 19.3262 16.5284V11.9581C19.3262 9.17195 17.7529 8.45125 14.6328 8.45125H13.2793C12.6729 8.45125 12.3652 8.36336 11.8818 8.0118L10.7217 7.19441L10.5107 3.9073C10.4668 3.27449 10.0625 2.94051 9.53516 2.97566C8.99902 3.00203 8.62988 3.38875 8.66504 4.01277L8.87598 7.27351C8.91992 7.98543 9.20117 8.39851 9.64063 8.72371L11.75 10.2618C12.0576 10.4815 12.1631 10.754 12.1631 11.1055V23.2432C12.1631 23.9376 12.5938 24.3067 13.165 24.3067ZM14.6328 7.57234C15.8018 7.57234 16.7422 6.60555 16.7422 5.47176C16.7422 4.30281 15.8018 3.35359 14.6328 3.35359C13.4551 3.35359 12.5322 4.30281 12.5322 5.47176C12.5322 6.62312 13.4551 7.57234 14.6328 7.57234Z"/>

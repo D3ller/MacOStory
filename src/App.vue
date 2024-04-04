@@ -15,5 +15,7 @@ import Top from "@/components/Top.vue";
 </template>
 
 <style lang="postcss" scoped>
-
+.ubuntu {
+  height: 100vh;
+}
 </style>
