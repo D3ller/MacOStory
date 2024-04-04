@@ -88,6 +88,7 @@ const handleDragOver = (event) => {
   grid-template-rows: repeat(auto-fill, 70px);
   padding: 2px;
   justify-items: center;
+  @apply pt-6;
 }
 
 .grid-cell {

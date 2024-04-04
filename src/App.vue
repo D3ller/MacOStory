@@ -6,7 +6,7 @@ import Top from "@/components/Top.vue";
 <template>
 
   <div class="flex w-full justify-center">
-  <div class="ubuntu min-w-[380px]">
+  <div class="ubuntu min-w-[380px] max-w-[380px] overflow-hidden">
     <Top></Top>
   <RouterView />
   </div>
