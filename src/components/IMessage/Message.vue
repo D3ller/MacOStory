@@ -3,8 +3,8 @@ const props = defineProps(['direction', 'content'])
 </script>
 
 <template>
-  <div class="w-full flex justify-start mt-3" v-if="direction === 'left'">
-    <div class="relative max-w-max">
+  <div class="w-full flex justify-start mt-3 pl-2" v-if="direction === 'left'">
+    <div class="message">
       <div class="bg-[#E9E9EB] ml-1 rounded-xl p-2">
         <p>{{content}}</p>
       </div>
@@ -16,8 +16,8 @@ const props = defineProps(['direction', 'content'])
     </div>
   </div>
 
-  <div class="w-full flex justify-end mt-3" v-if="direction === 'right'">
-    <div class="relative max-w-max">
+  <div class="w-full flex justify-end mt-3 pr-2" v-if="direction === 'right'">
+    <div class="message">
       <div class="bg-[#0078FF] mr-1 rounded-xl p-2">
         <p>{{content}}</p>
       </div>
@@ -29,3 +29,10 @@ const props = defineProps(['direction', 'content'])
     </div>
   </div>
 </template>
+
+<style scoped lang="postcss">
+.message {
+  @apply relative w-1/2 max-w-max;
+  word-wrap: break-word;
+}
+</style>
