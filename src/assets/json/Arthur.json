@@ -1,0 +1,27 @@
+[
+  {
+    "personne": "Arthur",
+    "message": "tu pourrais m’aider pour le cours de math",
+    "direction": "left"
+  },
+  {
+    "personne": "Thomas",
+    "message": "Demande plutôt à emma elle a eu une bonne note lors du dernier partiel",
+    "direction": "right"
+  },
+  {
+    "personne": "Arthur",
+    "message": "Oui tu as raison je vais faire comme ça",
+    "direction": "left"
+  },
+  {
+    "personne": "Thomas",
+    "message": "ok a plus",
+    "direction": "right"
+  },
+  {
+    "personne": "Arthur",
+    "message": "A plus",
+    "direction": "left"
+  }
+]

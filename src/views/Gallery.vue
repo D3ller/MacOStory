@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div id="galerie_body" class="w-full h-full bg-white relative flex justify-center items-center flex-col">
+  <div id="galerie_body" class="w-full h-full bg-[#f3f3f3] relative flex justify-center items-center flex-col">
     <div id="galerie">
       <img class="img_galerie" src="@/assets/Image/image00001.jpeg" alt="">
       <img class="img_galerie" src="@/assets/Image/image00002.jpeg" alt="">

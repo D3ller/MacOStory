@@ -1,0 +1,17 @@
+[
+  {
+    "personne": "emma",
+    "message": "on se voit plus tard",
+    "direction": "left"
+  },
+  {
+    "personne": "thomas",
+    "message": "ça marche",
+    "direction": "right"
+  },
+  {
+    "personne": "emma",
+    "message": "bye bonne nuit",
+    "direction": "left"
+  }
+]

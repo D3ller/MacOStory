@@ -32,8 +32,8 @@
     </div>
   </header>
   <div class="mt-3">
-    <Contact nom="Test"/>
-    <Contact nom="Test"/>
+    <Contact nom="Arthur"/>
+    <Contact nom="Emma"/>
   </div>
 </template>
 

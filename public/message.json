@@ -2,39 +2,48 @@
   "dialogue": [
     {
       "speaker": "Arthur",
-      "text": "C'était vraiment une soirée de dingue hier !"
+      "text": "C'était vraiment une soirée de dingue hier !",
+      "direction": "left"
     },
     {
       "speaker": "Thomas",
-      "text": "Euh, quelle soirée ?"
+      "text": "Euh, quelle soirée ?",
+        "direction": "right"
     },
     {
       "speaker": "Arthur",
-      "text": "T'as carrément abusé sur la bouteille toi ."
+      "text": "T'as carrément abusé sur la bouteille toi .",
+        "direction": "left"
     },
     {
       "speaker": "Thomas",
-      "text": "Ha ha, très drôle, mais sérieux, j'étais chez moi hier soir."
+      "text": "Ha ha, très drôle, mais sérieux, j'étais chez moi hier soir.",
+        "direction": "right"
     },
     {
       "speaker": "Emma",
-      "text": "Hé, qu'est-ce que tu fais ? Je t'attends."
+      "text": "Hé, qu'est-ce que tu fais ? Je t'attends.",
+        "direction": "left"
     },
     {
       "speaker": "Thomas",
-      "text": "Hein ? Tu m'attends ?"
+      "text": "Hein ? Tu m'attends ?",
+        "direction": "right"
     },
     {
       "speaker": "Emma",
-      "text": "Ben oui, tu m'avais proposé d'aller voir Dune 2, t'as oublié ?"
+      "text": "Ben oui, tu m'avais proposé d'aller voir Dune 2, t'as oublié ?",
+        "direction": "left"
     },
     {
       "speaker": "Thomas",
-      "text": "Attends, mais je t'ai proposé ça quand ?"
+      "text": "Attends, mais je t'ai proposé ça quand ?",
+        "direction": "right"
     },
     {
       "speaker": "Emma",
-      "text": "Vendredi, en sortant des cours."
+      "text": "Vendredi, en sortant des cours.",
+        "direction": "left"
     },
     {
       "speaker": "Thomas",
