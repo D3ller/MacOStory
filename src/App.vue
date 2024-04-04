@@ -16,6 +16,6 @@ import Navbar from "@/components/Navbar.vue";
 <style lang="postcss" scoped>
 
 .ubuntu {
-  @apply min-h-screen px-2 py-4 overflow-x-hidden;
+  @apply min-h-screen overflow-x-hidden;
 }
 </style>

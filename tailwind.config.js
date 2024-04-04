@@ -14,6 +14,10 @@ export default {
         ...grass,
         ...mauve,
       },
+      fontFamily: {
+        Noto: 'Noto Color Emoji, sans-serif',
+        Poppins: 'Poppins, sans-serif',
+      }
     },
   },
   plugins: [],
