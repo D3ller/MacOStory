@@ -84,10 +84,10 @@ const handleDragOver = (event) => {
 <style lang="postcss" scoped>
 .grids {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 70px);
+  grid-template-columns: repeat(auto-fill, 94px);
   grid-template-rows: repeat(auto-fill, 70px);
-  column-gap: 10px;
   padding: 2px;
+  justify-items: center;
 }
 
 .grid-cell {
