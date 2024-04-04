@@ -1,6 +1,11 @@
 <template>
   <header class="flex font-Poppins justify-between items-center px-2">
-    <div>
+    <div class="flex items-center">
+      <a @click="$router.push('/')" class="mr-2">
+        <svg width="9" height="16.5" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.60938 21.2622C9.86719 21.52 10.1953 21.6606 10.582 21.6606C11.3555 21.6606 11.9766 21.0513 11.9766 20.2778C11.9766 19.8911 11.8125 19.5396 11.543 19.27L3.33984 11.2544L11.543 3.26221C11.8125 2.99268 11.9766 2.62939 11.9766 2.25439C11.9766 1.48096 11.3555 0.871582 10.582 0.871582C10.1953 0.871582 9.86719 1.01221 9.60938 1.27002L0.492188 10.1763C0.164062 10.481 0.0117188 10.856 0 11.2661C0 11.6763 0.164062 12.0278 0.492188 12.3442L9.60938 21.2622Z" fill="#007AFF"/>
+        </svg>
+      </a>
       <b class="text-[14px]">9:41</b>
     </div>
     <div class="top_right flex">
@@ -30,3 +35,5 @@
   @apply ml-1
 }
 </style>
+<script setup>
+</script>
