@@ -1,4 +1,13 @@
-<script setup></script>
+<script setup>
+import store from "@/store.js";
+import {onMounted} from "vue";
+
+onMounted(() => {
+  store.seePhoto = true
+  // store.onPhoto();
+})
+
+</script>
 <template>
   <div id="galerie_body" class="w-full h-full bg-[#f3f3f3] relative flex justify-center items-center flex-col">
     <div id="galerie">

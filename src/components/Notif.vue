@@ -34,6 +34,7 @@
 </style>
 
 <script setup>
+
 const props = defineProps(["nom", 'content'])
 
 </script>
