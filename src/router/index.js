@@ -17,6 +17,16 @@ const router = createRouter({
       component: MessageContact
     },
     {
+      path:'/albums/gallery',
+      name: 'gallery',
+      component: () => import('../views/Gallery.vue')
+    },
+    {
+      path:'/albums',
+      name: 'albums',
+      component: () => import('../views/ALBUMS.vue')
+    },
+    {
       path:'/imessage/:id',
       name: 'imessage',
       component: IMessage
