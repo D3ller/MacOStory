@@ -20,6 +20,11 @@ const router = createRouter({
       path:'/imessage/:id',
       name: 'imessage',
       component: IMessage
+    },
+    {
+      path: '/localization',
+        name: 'localization',
+        component: () => import('../views/Localization.vue')
     }
   ]
 })
