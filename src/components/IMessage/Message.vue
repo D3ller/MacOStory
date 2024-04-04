@@ -3,8 +3,8 @@ const props = defineProps(['direction', 'content'])
 </script>
 
 <template>
-  <div class="w-full flex justify-start mt-3 pl-2" v-if="direction === 'left'">
-    <div class="message">
+  <div class="w-full flex justify-start mt-3" v-if="direction === 'left'">
+    <div class="message ml-1">
       <div class="bg-[#E9E9EB] ml-1 rounded-xl p-2">
         <p>{{content}}</p>
       </div>
@@ -16,8 +16,8 @@ const props = defineProps(['direction', 'content'])
     </div>
   </div>
 
-  <div class="w-full flex justify-end mt-3 pr-2" v-if="direction === 'right'">
-    <div class="message">
+  <div class="w-full flex justify-end mt-3" v-if="direction === 'right'">
+    <div class="message mr-1">
       <div class="bg-[#0078FF] mr-1 rounded-xl p-2">
         <p>{{content}}</p>
       </div>
