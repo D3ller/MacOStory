@@ -91,7 +91,15 @@ const handleDragOver = (event) => {
 }
 
 .grid-cell {
-  @apply w-[64px] h-[64px] flex justify-center items-center justify-items-center;
+  @apply w-[64px] h-[64px] flex justify-center items-center justify-items-center relative;
+}
+
+.app {
+  @apply w-full h-full rounded-[5px] flex justify-center items-center relative;
+}
+
+.app img {
+  @apply w-full h-full;
 }
 
 .app img:active {
