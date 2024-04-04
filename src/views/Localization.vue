@@ -1,57 +1,36 @@
 <script setup>
-var MarkerAnnotation = mapkit.MarkerAnnotation,
-    clickAnnotation;
-var sfo = new mapkit.Coordinate(37.616934, -122.383790),
-    work = new mapkit.Coordinate(37.3349, -122.0090201);
+import { onMounted, ref } from 'vue';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+// Importez votre image de marqueur personnalisée
+import customMarkerImg from '/public/Iphone.png';
 
-mapkit.init({
-  authorizationCallback: function(done) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "/services/jwt");
-    xhr.addEventListener("load", function() {
-      done(this.responseText);
-    });
-    xhr.send();
-  }
-});
-var map = new mapkit.Map("map");
+const mapContainer = ref(null);
 
-// Setting properties on creation:
-var sfoAnnotation = new MarkerAnnotation(sfo, { color: "#f4a56d", title: "SFO", glyphText: "✈️" });
+onMounted(() => {
+  const map = L.map(mapContainer.value).setView([48.2973451, 4.0744009], 13);
 
-// Setting properties after creation:
-var workAnnotation = new MarkerAnnotation(work);
-workAnnotation.color = "#969696";
-workAnnotation.title = "Work";
-workAnnotation.subtitle = "Apple Park";
-workAnnotation.selected = "true";
-workAnnotation.glyphText = "";
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 
-// Add and show both annotations on the map
-map.showItems([sfoAnnotation, workAnnotation]);
-
-// Drop an annotation where a Shift-click is detected:
-map.element.addEventListener("click", function(event) {
-  if(!event.shiftKey) {
-    return;
-  }
-
-  if(clickAnnotation) {
-    map.removeAnnotation(clickAnnotation);
-  }
-
-  var coordinate = map.convertPointOnPageToCoordinate(new DOMPoint(event.pageX, event.pageY));
-  clickAnnotation = new MarkerAnnotation(coordinate, {
-    title: "Click!",
-    color: "#c969e0"
+  // Création de l'objet Icon personnalisé
+  const customIcon = L.icon({
+    iconUrl: customMarkerImg,
+    iconSize: [45],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76] // L'endroit où la popup se relie à l'icône
   });
-  map.addAnnotation(clickAnnotation);
+
+  L.marker([48.2973451, 4.0744009], { icon: customIcon }).addTo(map)
+      .bindPopup('Votre Iphone')
+      .openPopup();
 });
 </script>
 
 <template>
 <div class="w-full h-full bg-blue-500 relative">
-  <div class="absolute right-5 bg-white top-5 rounded-[5px]">
+  <div class="absolute z-20 right-5 bg-white top-5 rounded-[5px]">
     <div class="px-1.5 py-2 border-b-[#c0c2c3] border-b">
       <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.53027 14.8154L11.7227 17.1533C11.9336 17.2676 12.1094 17.3555 12.3291 17.4082V2.80957L8.25098 0.348633C7.9873 0.19043 7.74121 0.0761719 7.53027 0.0234375V14.8154ZM0.736328 15.9932C0.736328 16.7578 1.21973 17.1797 1.92285 17.1797C2.17773 17.1797 2.44141 17.1006 2.74023 16.9424L6.23828 15.0439V0.120117C6.04492 0.199219 5.81641 0.295898 5.5791 0.436523L1.60645 2.69531C1.00879 3.0293 0.736328 3.50391 0.736328 4.17188V15.9932ZM13.6123 17.3643C13.7178 17.3379 13.8232 17.2939 13.9199 17.2236L18.3672 14.71C18.9824 14.3672 19.2637 13.9014 19.2637 13.2334V1.47363C19.2637 0.673828 18.7715 0.27832 18.0244 0.27832C17.752 0.27832 17.4619 0.357422 17.1543 0.524414L13.6123 2.49316V17.3643Z" fill="#1C1C1E"/>
@@ -65,10 +44,9 @@ map.element.addEventListener("click", function(event) {
     </div>
   </div>
 
-  <div id="map"></div>
+  <div class="w-full h-[calc(100%-275px)] absolute z-0" ref="mapContainer"></div>
 
-
-  <div class="absolute w-full bg-white h-[220px] bottom-[60px] rounded-tl-[10px] rounded-tr-[10px]">
+  <div class="absolute w-full bg-white h-[220px] bottom-[60px] rounded-tl-[10px] rounded-tr-[10px] z-10">
     <div class="flex justify-between items-center p-2.5">
     <h1 class="font-Poppins font-bold text-lg m-0">Appareils</h1>
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,6 +57,16 @@ map.element.addEventListener("click", function(event) {
     <hr class="border-[#d8d8d842] my-2">
 
     <div class="p-2">
+
+      <div class="flex justify-between px-1 items-center">
+      <img class="w-8 h-8" src="/RoundedPhone.png" alt="">
+      <div class="flex flex-col">
+      <h2 class="m-0 font-Poppins text-[14px]">Iphone de Thomas</h2>
+      <p class="m-0 font-Poppins text-[12px] text-[#717171]">Cet iPhone</p>
+      </div>
+
+      <p class="m-0 font-Poppins text-[12px] text-[#717171]">Avec vous</p>
+      </div>
       
     </div>
   </div>
