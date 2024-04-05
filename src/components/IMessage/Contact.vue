@@ -3,7 +3,7 @@ const props = defineProps(['nom'])
 </script>
 
 <template>
-  <a :href="'/imessage/'+nom" class="font-Poppins">
+  <router-link :to="'/imessage/'+nom" class="font-Poppins">
     <div class="flex m-2 border-b border-solid border-0 border-slate-300">
       <div class="flex justify-center items-center w-1/6">
         <div class="w-12 h-12 rounded-full bg-sky-200"></div>
@@ -21,7 +21,7 @@ const props = defineProps(['nom'])
         </svg>
       </div>
     </div>
-  </a>
+  </router-link>
 </template>
 
 <style scoped>

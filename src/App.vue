@@ -22,6 +22,7 @@ watch(() => store.seePhoto, async (newValue) => {
     await new Promise(resolve => setTimeout(resolve, 3000));
 
     isActive.value = 'inActive';
+    store.updateArthurSlice()
   }
 });
 
@@ -45,7 +46,7 @@ console.log(newValue)
         <button class="w-[150px] h-[30px] rounded-md border font-Poppins text-white font-bold bg-blue-900" @click.prevent="play()">Jouer</button>
       </div>
     </div>
-  <div class="ubuntu min-w-[380px] max-w-[380px] overflow-hidden">
+  <div class="ubuntu min-w-[380px] max-w-[380px] overflow-hidden relative">
     <Notif :class="isActive" :nom="store.Author" :content="store.Message"></Notif>
     <Top></Top>
   <RouterView />

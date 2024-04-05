@@ -203,6 +203,10 @@ let msg = ref()
 function submit() {
   if (user === 'Arthur'){
 store.updateArthurSlice()
+
+    setTimeout(() => {
+      store.updateArthurSlice()
+    }, 1000)
   } else {
     store.updateEmmaSlice()
 
