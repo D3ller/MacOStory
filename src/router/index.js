@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import IMessage from "@/views/IMessage/IMessage.vue";
 import MessageContact from "@/views/IMessage/MessageContact.vue";
+import Calc from "@/views/Calc.vue";
+import Notes from "@/views/Notes.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,6 +37,16 @@ const router = createRouter({
       path: '/localization',
         name: 'localization',
         component: () => import('../views/Localization.vue')
+    },
+    {
+      path: '/calc',
+      name: 'calc',
+      component: Calc
+    },
+    {
+      path: '/notes',
+      name: 'notes',
+      component: Notes
     }
   ]
 })

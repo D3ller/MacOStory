@@ -32,9 +32,9 @@ import router from "@/router/index.js";
 
 const apps = [
   { id: 1, name: 'Safari', src: '/app/safari-2021-06-02.png' },
-  { id: 2, name: 'Calculator', src: '/app/calculator-2021-04-29.png' },
+  { id: 2, name: 'calc', src: '/app/calculator-2021-04-29.png' },
   {id: 3, name: 'Maps', src: '/app/maps.png'},
-  {id: 4, name: 'Notes', src: '/app/notes-2021-05-25.png'},
+  {id: 4, name: 'notes', src: '/app/notes-2021-05-25.png'},
   {id: 5, name: 'Systeme', src: '/app/system-preferences-2021-06-03.png'}
 ];
 
