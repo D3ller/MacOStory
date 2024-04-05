@@ -31,25 +31,32 @@ watch(() => store.seePhoto, async (newValue) => {
   }
 });
 
-watch(() => store.ArthurSlice === 5, async (newValue) => {
-console.log(newValue)
-  store.Author = "Emma"
-  store.Message = "Hé, qu'est-ce que tu fais ? Je t'attends.\n"
+setInterval(() => {
+  console.log(store.ArthurSlice + " " + store.EmmaSlice)
+}, 200)
 
-  await new Promise(resolve => setTimeout(resolve, 3000));
+const unwatch = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
+  // Vérifie si la condition spécifique est remplie
+  if(newValue === 4) {
+    console.log(newValue);
+    store.Author = "Emma";
+    store.Message = "Hé, qu'est-ce que tu fais ? Je t'attends.\n";
+    store.updateEmmaSlice();
 
-  isActive.value = 'active';
+    await new Promise(resolve => setTimeout(resolve, 3000));
 
-  await new Promise(resolve => setTimeout(resolve, 3000));
+    isActive.value = 'active';
 
-  isActive.value = 'inActive';
+    await new Promise(resolve => setTimeout(resolve, 3000));
 
-  await new Promise(resolve => setTimeout(resolve, 1000));
+    isActive.value = 'inActive';
 
-  await store.updateEmmaSlice()
+    await new Promise(resolve => setTimeout(resolve, 1000));
 
-  await router.push({name: 'imessage', params: {id: 'Emma'}})
-})
+    unwatch();
+  }
+}, { immediate: true });
+
 
 </script>
 

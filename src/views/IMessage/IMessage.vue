@@ -29,7 +29,7 @@
     <section class="max-h-[70vh] overflow-y-scroll flex flex-col-reverse w-full">
       <div v-if="router.currentRoute.value.params.id === 'Arthur'">
         <Message v-for="message in Arthur" :direction="message.direction" :content="message.message"/>
-        <Message v-for="message in Arthur2.slice(0,store.ArthurSlice)" :direction="message.direction" :content="message.text"/>
+        <Message v-for="message in Arthur2.slice(0,store.ArthurSlice)" :direction="message.direction" :content="message.text" :img="message.image"/>
       </div>
 
       <div v-if="router.currentRoute.value.params.id === 'Emma'">
@@ -211,11 +211,7 @@ msg.value = ''
     }, 1000)
     console.log(store.ArthurSlice)
   } else {
-    store.updateEmmaSlice()
-msg.value = ''
-    setTimeout(() => {
-      store.updateEmmaSlice()
-    }, 500)
+
   }
 }
 
