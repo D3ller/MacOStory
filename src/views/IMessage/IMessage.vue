@@ -188,17 +188,19 @@ import Arthur from '@/assets/json/Arthur.json'
 import Arthur2 from '@/assets/json/Arthur2.json'
 import Emma from '@/assets/json/Emma.json'
 import Emma2 from '@/assets/json/Emma2.json'
-import {onMounted, ref} from "vue";
+import {onMounted, ref, watch} from "vue";
 import router from "@/router/index.js";
 import store from "@/store.js";
+import {onBeforeRouteUpdate, useRoute} from "vue-router";
 
 // import {useRouter} from "vue-router";
 
 const props = defineProps(["nom"])
 // const router = useRouter()
 
-onMounted(() => {
-  console.log(router.currentRoute.value.params.id)
+onBeforeRouteUpdate(async (to, from, next) => {
+  console.log(to, from)
+  next();
 })
 
 const user = router.currentRoute.value.params.id

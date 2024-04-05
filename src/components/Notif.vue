@@ -2,7 +2,8 @@
   <div class="flex justify-center w-full mt-3 absolute z-10 font-Poppins notif">
     <div class="flex w-4/5 h-20 bg-blur rounded-2xl shadow-2xl">
       <div class="m-2 flex items-center">
-        <img src="/app/message.png" class="w-16">
+        <img src="/app/message.png" class="w-16" v-if="!store.App" />
+        <img src="/app/geolocalisation.png" class="w-16" v-else />
         <div class="h-full m-1">
           <h5>{{nom}}</h5>
           <div class="overflow-hidden h-10">
@@ -34,6 +35,8 @@
 </style>
 
 <script setup>
+
+import store from "@/store.js";
 
 const props = defineProps(["nom", 'content'])
 
