@@ -2,11 +2,16 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Top from "@/components/Top.vue";
 import Notif from "@/components/Notif.vue"
-import {ref, watch} from "vue";
+import {onMounted, ref, watch} from "vue";
 import store from "@/store.js";
+import router from "@/router/index.js";
 
 const isActive = ref('inActive')
 const overlayVisible = ref(true)
+
+onMounted(() => {
+  router.push({ name: 'home' })
+})
 
 function play() {
   overlayVisible.value = false
@@ -26,8 +31,24 @@ watch(() => store.seePhoto, async (newValue) => {
   }
 });
 
-watch(() => store.ArthurSlice === 3, async (newValue) => {
+watch(() => store.ArthurSlice === 5, async (newValue) => {
 console.log(newValue)
+  store.Author = "Emma"
+  store.Message = "Hé, qu'est-ce que tu fais ? Je t'attends.\n"
+
+  await new Promise(resolve => setTimeout(resolve, 3000));
+
+  isActive.value = 'active';
+
+  await new Promise(resolve => setTimeout(resolve, 3000));
+
+  isActive.value = 'inActive';
+
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  await store.updateEmmaSlice()
+
+  await router.push({name: 'imessage', params: {id: 'Emma'}})
 })
 
 </script>
@@ -47,7 +68,7 @@ console.log(newValue)
       </div>
     </div>
   <div class="ubuntu min-w-[380px] max-w-[380px] overflow-hidden relative">
-    <Notif :class="isActive" :nom="store.Author" :content="store.Message"></Notif>
+    <Notif :class="isActive" :nom="store.Author" :content="store.Message" @click="router.push({name: 'imessage', params: {id: store.Author}})"></Notif>
     <Top></Top>
   <RouterView />
   </div>
