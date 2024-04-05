@@ -6,6 +6,7 @@ Author: 'Arthur',
 Message: 'C\'était vraiment une soirée de dingue hier !',
     EmmaSlice: 0,
     ArthurSlice: 0,
+    EmmaWait: false,
 
 
     sendFirstMessage() {

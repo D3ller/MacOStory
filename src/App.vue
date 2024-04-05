@@ -22,7 +22,7 @@ function play() {
 
 watch(() => store.seePhoto, async (newValue) => {
   if (newValue === true) {
-
+    store.updateArthurSlice()
     await new Promise(resolve => setTimeout(resolve, 3000));
 
     isActive.value = 'active';
@@ -30,7 +30,6 @@ watch(() => store.seePhoto, async (newValue) => {
     await new Promise(resolve => setTimeout(resolve, 3000));
 
     isActive.value = 'inActive';
-    store.updateArthurSlice()
   }
 });
 
@@ -45,6 +44,7 @@ const unwatch = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
     store.Author = "Emma";
     store.Message = "Hé, qu'est-ce que tu fais ? Je t'attends.\n";
     store.updateEmmaSlice();
+    store.EmmaWait = true
 
     await new Promise(resolve => setTimeout(resolve, 3000));
 
