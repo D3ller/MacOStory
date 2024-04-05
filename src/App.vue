@@ -9,7 +9,10 @@ const isActive = ref('inActive')
 const overlayVisible = ref(true)
 
 function play() {
-  overlayVisible.value = false
+  overlayVisible.value = false;
+  setTimeout(() => {
+    overlayVisible.value = false;
+  }, 500); // Attendez 500ms avant de masquer l'overlay pour permettre à la transition de se terminer
 }
 
 watch(() => store.seePhoto, async (newValue) => {
@@ -35,16 +38,23 @@ console.log(newValue)
 <template>
 
   <div class="flex w-full justify-center">
-    <div class="intro absolute z-10 bg-white w-full h-screen font-Poppins" v-if="overlayVisible === true">
-      <h1 class="text-center mb-3">titre du jeu</h1>
-      <p class="mx-5">
+    <div class="intro absolute z-10 bg-white w-full h-screen font-Poppins" :class="{ 'transition-up': !overlayVisible }">
+     <div class="page_accueil">
+      <div class="titre_accueil">
+        <h1 class="text-center mb-3">Inconnu virtuel : Le mystère de Thomas</h1>
+      </div>
+      <div class="p_accueil">
+        <p class="mx-5">
         Bienvenue dans ce jeu interactif où vous allez aider Thomas à comprendre les phénomènes étranges qui se produisent autour de lui.
         Vous aurez l'opportunité d'assister Thomas en utilisant son téléphone pour
         explorer différentes applications afin de l'aider à comprendre ce qui lui arrive.
       </p>
+      </div>
       <div class="flex justify-center mt-5">
         <button class="w-[150px] h-[30px] rounded-md border font-Poppins text-white font-bold bg-blue-900" @click.prevent="play()">Jouer</button>
       </div>
+      <hr class="hr_accueil">
+     </div>
     </div>
   <div class="ubuntu min-w-[380px] max-w-[380px] overflow-hidden relative">
     <Notif :class="isActive" :nom="store.Author" :content="store.Message"></Notif>
@@ -58,5 +68,32 @@ console.log(newValue)
 <style lang="postcss" scoped>
 .ubuntu {
   height: 100vh;
+}
+.page_accueil{
+  width: 380px;
+  margin:  100px auto 0px auto ;
+}
+.titre_accueil{
+  margin-bottom: 30px;
+}
+.p_accueil{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.mx-5{
+  font-style: normal ;
+}
+.hr_accueil{
+  height: 2px;
+  background-color: rgba(55, 55, 55, 0.722);
+  border: none;
+  width: 300px;
+  border-radius: 10px;
+  margin: 50px auto 0px auto;
+}
+.transition-up {
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(-100%);
 }
 </style>
