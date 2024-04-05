@@ -75,6 +75,7 @@ const finishwatch = watch(() => store.EmmaSlice, async (newValue, oldValue) => {
     finishwatch();
   }
 }, { immediate: true });
+
 </script>
 
 <template>
@@ -83,6 +84,9 @@ const finishwatch = watch(() => store.EmmaSlice, async (newValue, oldValue) => {
     <!--page de fin-->
     <div class="intro absolute z-10 bg-black text-white w-full h-screen font-Poppins flex flex-col items-center justify-center" :class="gameFinish">
       <h1>FIN DU JEU</h1>
+      <div class="max-w-96" :class="timeEnd">
+        <img src="/article.png" alt="" class="w-full">
+      </div>
       <a href="/" class="text-white no-underline bg-red-500 py-2 px-3 rounded-md mt-3">REJOUER</a>
     </div>
 
@@ -147,6 +151,10 @@ const finishwatch = watch(() => store.EmmaSlice, async (newValue, oldValue) => {
 }
 
 .end_inActive {
+  display: none;
+}
+
+.timeend {
   display: none;
 }
 </style>
