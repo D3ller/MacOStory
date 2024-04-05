@@ -29,10 +29,12 @@
     <section class="max-h-[70vh] overflow-y-scroll flex flex-col-reverse w-full">
       <div v-if="router.currentRoute.value.params.id === 'Arthur'">
         <Message v-for="message in Arthur" :direction="message.direction" :content="message.message"/>
+        <Message v-for="message in Arthur2.slice(0,store.ArthurSlice)" :direction="message.direction" :content="message.text"/>
       </div>
 
       <div v-if="router.currentRoute.value.params.id === 'Emma'">
         <Message v-for="message in Emma" :direction="message.direction" :content="message.message"/>
+        <Message v-for="message in Emma2.slice(0,store.EmmaSlice)" :direction="message.direction" :content="message.text"/>
       </div>
     </section>
 
@@ -180,7 +182,9 @@
 <script setup>
 import Message from "@/components/IMessage/Message.vue";
 import Arthur from '@/assets/json/Arthur.json'
+import Arthur2 from '@/assets/json/Arthur2.json'
 import Emma from '@/assets/json/Emma.json'
+import Emma2 from '@/assets/json/Emma2.json'
 import {onMounted, ref} from "vue";
 import router from "@/router/index.js";
 import store from "@/store.js";
@@ -198,8 +202,13 @@ const user = router.currentRoute.value.params.id
 let msg = ref()
 function submit() {
   if (user === 'Arthur'){
-    store.Arthur.push(msg)
-    console.log(store.Arthur)
+store.updateArthurSlice()
+  } else {
+    store.updateEmmaSlice()
+
+    setTimeout(() => {
+      store.updateEmmaSlice()
+    }, 500)
   }
 }
 

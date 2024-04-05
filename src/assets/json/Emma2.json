@@ -1,0 +1,37 @@
+[
+  {
+    "speaker": "Emma",
+    "text": "Hé, qu'est-ce que tu fais ? Je t'attends.",
+    "direction": "left"
+  },
+  {
+    "speaker": "Thomas",
+    "text": "Hein ? Tu m'attends ?",
+    "direction": "right"
+  },
+  {
+    "speaker": "Emma",
+    "text": "Ben oui, tu m'avais proposé d'aller voir Dune 2, t'as oublié ?",
+    "direction": "left"
+  },
+  {
+    "speaker": "Thomas",
+    "text": "Attends, mais je t'ai proposé ça quand ?",
+    "direction": "right"
+  },
+  {
+    "speaker": "Emma",
+    "text": "Vendredi, en sortant des cours.",
+    "direction": "left"
+  },
+  {
+    "speaker": "Thomas",
+    "text": "Mais c'est pas possible, j'étais malade, j'ai passé ma journée au lit.",
+    "direction": "right"
+  },
+  {
+    "speaker": "Emma",
+    "text": "Tu me poses vraiment un lapin ?",
+    "direction": "left"
+  }
+]

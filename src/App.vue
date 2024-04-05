@@ -20,6 +20,10 @@ watch(() => store.seePhoto, async (newValue) => {
   }
 });
 
+watch(() => store.ArthurSlice === 3, async (newValue) => {
+console.log(newValue)
+})
+
 
 </script>
 
