@@ -24,8 +24,10 @@ import router from "@/router/index.js";
   <h2 class="font-Poppins font-semibold text-xl text-black mb-3">Mes albums</h2>
 
   <div class="grid grid-cols-2 gap-4 justify-items-center">
-    <div class="bg-classique rounded-lg p-4 h-[100px] w-[105px] border-black border-4 border-solid" @click="router.push({ name: 'gallery' })">
-    </div>
+    <router-link to="/albums/gallery">
+      <div class="bg-classique rounded-lg p-4 h-[100px] w-[105px] border-black border-4 border-solid">
+      </div>
+    </router-link>
     <div class="bg-classique h-[100px] w-[105px] border-black border-4 border-solid rounded-lg p-4">
 
     </div>

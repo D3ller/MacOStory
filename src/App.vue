@@ -8,6 +8,7 @@ import router from "@/router/index.js";
 
 const isActive = ref('inActive')
 const overlayVisible = ref(true)
+const gameFinish = ref('end_inActive')
 
 onMounted(() => {
   router.push({ name: 'home' })
@@ -60,18 +61,32 @@ const unwatch = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
   }
 }, { immediate: true });
 
+const finish = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
+  // Vérifie si la condition spécifique est remplie
+  if(newValue === 21) {
+    setTimeout(() => {gameFinish.value = 'end'}, 5000)
+    finish();
+  }
+}, { immediate: true });
+
 const finishwatch = watch(() => store.EmmaSlice, async (newValue, oldValue) => {
   if(newValue === 7) {
     store.EmmaWait = false
     finishwatch();
   }
 }, { immediate: true });
-
 </script>
 
 <template>
 
   <div class="flex w-full justify-center">
+    <!--page de fin-->
+    <div class="intro absolute z-10 bg-black text-white w-full h-screen font-Poppins flex flex-col items-center justify-center" :class="gameFinish">
+      <h1>FIN DU JEU</h1>
+      <a href="/" class="text-white no-underline bg-red-500 py-2 px-3 rounded-md mt-3">REJOUER</a>
+    </div>
+
+    <!--page d accueil-->
     <div class="intro absolute z-10 bg-white w-full h-screen font-Poppins" :class="{ 'transition-up': !overlayVisible }">
      <div class="page_accueil">
       <div class="titre_accueil">
@@ -129,5 +144,9 @@ const finishwatch = watch(() => store.EmmaSlice, async (newValue, oldValue) => {
 .transition-up {
   transition: transform 0.5s ease-in-out;
   transform: translateY(-100%);
+}
+
+.end_inActive {
+  display: none;
 }
 </style>
