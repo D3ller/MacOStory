@@ -35,7 +35,15 @@ const apps = [
   { id: 2, name: 'calc', src: '/app/calculator-2021-04-29.png' },
   {id: 3, name: 'Maps', src: '/app/maps.png'},
   {id: 4, name: 'notes', src: '/app/notes-2021-05-25.png'},
-  {id: 5, name: 'Systeme', src: '/app/system-preferences-2021-06-03.png'}
+  {id: 5, name: 'Systeme', src: '/app/system-preferences-2021-06-03.png'},
+  {id: 6, name: 'App store', src: '/app/app-store-2021-04-22.png'},
+  {id: 7, name: 'Calendar', src: '/app/calendar-2021-04-29.png'},
+  {id: 8, name: 'Reminders', src: '/app/reminders-2021-05-28.png'},
+  {id: 8, name: 'Instagram', src: '/app/Instagram.png'},
+  {id: 9, name: 'Contacts', src: '/app/Contacts.png'},
+
+
+
 ];
 
 const appPositions = {
@@ -43,7 +51,11 @@ const appPositions = {
   2: 1,
   3: 2,
   4: 3,
-  5: 4
+  5: 4,
+  6: 5,
+  7: 6,
+  8: 7,
+  9: 8,
 };
 
 const gridCells = ref(Array.from({ length: 128 }, (_, index) => ({

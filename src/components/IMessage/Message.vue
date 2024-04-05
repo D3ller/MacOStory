@@ -21,6 +21,7 @@ const props = defineProps(['direction', 'content', 'img'])
     <div class="message mr-1">
       <div class="bg-[#0078FF] mr-1 rounded-xl p-2">
         <p>{{content}}</p>
+        <img v-if="img" :src="img" alt="img" class="w-40 h-40 object-cover rounded-xl" />
       </div>
       <div class="absolute bottom-0 right-0 -z-10">
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
