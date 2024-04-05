@@ -28,6 +28,9 @@ watch(() => store.seePhoto, async (newValue) => {
 
     isActive.value = 'active';
 
+    const audio = new Audio('/song/ding.mp3');
+    await audio.play();
+
     await new Promise(resolve => setTimeout(resolve, 3000));
 
     isActive.value = 'inActive';
@@ -39,7 +42,6 @@ setInterval(() => {
 }, 200)
 
 const unwatch = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
-  // Vérifie si la condition spécifique est remplie
   if(newValue === 4) {
     console.log(newValue);
     store.Author = "Emma";
@@ -47,9 +49,12 @@ const unwatch = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
     store.updateEmmaSlice();
     store.EmmaWait = true
 
+
     await new Promise(resolve => setTimeout(resolve, 3000));
 
     isActive.value = 'active';
+    const audio = new Audio('/song/ding.mp3');
+    await audio.play();
 
     await new Promise(resolve => setTimeout(resolve, 3000));
 
@@ -62,7 +67,6 @@ const unwatch = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
 }, { immediate: true });
 
 const finish = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
-  // Vérifie si la condition spécifique est remplie
   if(newValue === 21) {
     setTimeout(() => {gameFinish.value = 'end'}, 5000)
     finish();
