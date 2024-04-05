@@ -1,12 +1,13 @@
 <script setup>
-const props = defineProps(['direction', 'content'])
+const props = defineProps(['direction', 'content', 'img'])
 </script>
 
 <template>
   <div class="w-full flex justify-start mt-3" v-if="direction === 'left'">
     <div class="message ml-1">
       <div class="bg-[#E9E9EB] ml-1 rounded-xl p-2">
-        <p>{{content}}</p>
+        <p v-if="content">{{content}}</p>
+        <img v-if="img" :src="img" alt="img" class="w-40 h-40 object-cover rounded-xl" />
       </div>
       <div class="absolute bottom-0 -z-10">
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
