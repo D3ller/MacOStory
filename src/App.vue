@@ -60,6 +60,12 @@ const unwatch = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
   }
 }, { immediate: true });
 
+const finishwatch = watch(() => store.EmmaSlice, async (newValue, oldValue) => {
+  if(newValue === 7) {
+    store.EmmaWait = false
+    finishwatch();
+  }
+}, { immediate: true });
 
 </script>
 

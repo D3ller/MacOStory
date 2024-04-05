@@ -216,7 +216,7 @@ msg.value = ''
     store.updateEmmaSlice()
     msg.value = ''
     setTimeout(() => {
-      store.updateArthurSlice()
+      store.updateEmmaSlice()
     }, delay)
 
   }
