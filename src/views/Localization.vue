@@ -25,7 +25,7 @@ onMounted(() => {
       .bindPopup('Votre Iphone')
       .openPopup();
 
- if(store.seeLocalizations && store.seePhoto) {
+ if(store.Localize) {
       L.marker([48.2972451, 4.0744009], { icon: customIcon }).addTo(map)
           .bindPopup('Votre Iphone (1)')
           .openPopup();

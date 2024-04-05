@@ -9,6 +9,7 @@ Message: 'C\'était vraiment une soirée de dingue hier !',
     EmmaWait: false,
     Image: false,
     App: false,
+    Localize: false,
 
 
     sendFirstMessage() {

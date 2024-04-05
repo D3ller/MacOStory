@@ -88,6 +88,7 @@ const unwatch2 = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     store.App = false;
+    store.Localize= true;
 
     unwatch2();
   }
