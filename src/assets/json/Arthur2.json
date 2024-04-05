@@ -31,7 +31,7 @@
   },
   {
     "speaker": "Arthur",
-    "image": "https://i.imgur.com/1Q9Q6QV.jpg",
+    "image": "/Date.png",
     "direction": "left"
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "speaker": "Thomas",
-    "text": "Vérifie ces photos et sa localisation.",
+    "text": "*Vérifie vos photos et votre localisation.*",
     "direction": "right"
   },
   {
@@ -71,7 +71,7 @@
   },
   {
     "speaker": "Thomas",
-    "image": "https://i.imgur.com/1Q9Q6QV.jpg",
+    "image": "/Thomas.png",
     "direction": "right"
   },
   {

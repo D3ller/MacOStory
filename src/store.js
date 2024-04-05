@@ -7,6 +7,8 @@ Message: 'C\'était vraiment une soirée de dingue hier !',
     EmmaSlice: 0,
     ArthurSlice: 0,
     EmmaWait: false,
+    Image: false,
+    App: false,
 
 
     sendFirstMessage() {

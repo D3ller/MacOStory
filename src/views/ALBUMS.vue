@@ -25,14 +25,14 @@ import router from "@/router/index.js";
 
   <div class="grid grid-cols-2 gap-4 justify-items-center">
     <router-link to="/albums/gallery">
-      <div class="bg-classique rounded-lg p-4 h-[100px] w-[105px] border-black border-4 border-solid">
+      <div class="bg-classique rounded-lg p-4 h-[100px] w-[105px] border-black border-4 border-solid cursor-pointer">
       </div>
     </router-link>
-    <div class="bg-classique h-[100px] w-[105px] border-black border-4 border-solid rounded-lg p-4">
+    <div class="bg-montagne h-[100px] w-[105px] border-black border-4 border-solid rounded-lg p-4">
 
     </div>
 
-    <div class="bg-classique h-[100px] w-[105px] border-black border-4 border-solid rounded-lg p-4">
+    <div class="bg-papillon h-[100px] w-[105px] border-black border-4 border-solid rounded-lg p-4">
 
     </div>
 
@@ -49,5 +49,15 @@ import router from "@/router/index.js";
   background: url("@/assets/Image/image00005.jpeg");
   background-size: cover;
 
+}
+
+.bg-papillon {
+  background: url("https://lemagdesanimaux.ouest-france.fr/images/dossiers/2021-01/papillon-063428.jpg");
+  background-size: cover;
+}
+
+.bg-montagne {
+  background: url("https://static.vecteezy.com/vite/assets/photo-masthead-375-b8ae1548.webp");
+  background-size: cover;
 }
 </style>

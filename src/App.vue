@@ -28,6 +28,9 @@ watch(() => store.seePhoto, async (newValue) => {
 
     isActive.value = 'active';
 
+    const audio = new Audio('/song/ding.mp3');
+    await audio.play();
+
     await new Promise(resolve => setTimeout(resolve, 3000));
 
     isActive.value = 'inActive';
@@ -39,17 +42,20 @@ setInterval(() => {
 }, 200)
 
 const unwatch = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
-  // Vérifie si la condition spécifique est remplie
   if(newValue === 4) {
     console.log(newValue);
     store.Author = "Emma";
     store.Message = "Hé, qu'est-ce que tu fais ? Je t'attends.\n";
     store.updateEmmaSlice();
     store.EmmaWait = true
+    store.Image = true
+
 
     await new Promise(resolve => setTimeout(resolve, 3000));
 
     isActive.value = 'active';
+    const audio = new Audio('/song/ding.mp3');
+    await audio.play();
 
     await new Promise(resolve => setTimeout(resolve, 3000));
 
@@ -61,8 +67,34 @@ const unwatch = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
   }
 }, { immediate: true });
 
+const unwatch2 = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
+  if(newValue === 9) {
+    console.log(newValue);
+    store.Author = "Airtag";
+    store.Message = "Un propriétaire de cette objet est à votre proximité!!\n";
+    store.App = true;
+
+
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
+    isActive.value = 'active';
+    const audio = new Audio('/song/ding.mp3');
+    await audio.play();
+
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
+    isActive.value = 'inActive';
+
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    store.App = false;
+
+    unwatch2();
+  }
+}, { immediate: true });
+
+
 const finish = watch(() => store.ArthurSlice, async (newValue, oldValue) => {
-  // Vérifie si la condition spécifique est remplie
   if(newValue === 21) {
     setTimeout(() => {gameFinish.value = 'end'}, 5000)
     finish();
@@ -110,7 +142,7 @@ const finishwatch = watch(() => store.EmmaSlice, async (newValue, oldValue) => {
      </div>
     </div>
   <div class="ubuntu min-w-[380px] max-w-[380px] overflow-hidden relative">
-    <Notif :class="isActive" :nom="store.Author" :content="store.Message" @click="router.push({name: 'imessage', params: {id: store.Author}})"></Notif>
+    <Notif :class="isActive" :nom="store.Author" :content="store.Message" @click="router.push({name: 'imessage', params: {id: store.Author}})" :app="store.App"></Notif>
     <Top></Top>
   <RouterView />
   </div>
