@@ -4,12 +4,14 @@ seePhoto: false,
 seeLocalizations: ref(false),
 Author: 'Arthur',
 Message: 'C\'était vraiment une soirée de dingue hier !',
-    EmmaSlice: 0,
-    ArthurSlice: 0,
+    EmmaSlice: 3,
+    ArthurSlice: 5,
     EmmaWait: false,
     Image: false,
     App: false,
     Localize: false,
+    ArthurNewMsg: false,
+    EmmaNewMsg: false,
 
 
     sendFirstMessage() {

@@ -4,7 +4,7 @@ import router from "@/router/index.js";
 </script>
 
 <template>
-<div class="h-full w-full bg-white">
+<div class="h-full w-full bg-black">
   <div class="flex justify-between items-center pt-[20px] mb-[20px] mx-4">
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M1.63672 8.65625H6.99805V14.0176C6.99805 14.5625 7.44629 15.0195 8 15.0195C8.55371 15.0195 9.00195 14.5625 9.00195 14.0176V8.65625H14.3633C14.9082 8.65625 15.3652 8.20801 15.3652 7.6543C15.3652 7.10059 14.9082 6.65234 14.3633 6.65234H9.00195V1.29102C9.00195 0.746094 8.55371 0.289062 8 0.289062C7.44629 0.289062 6.99805 0.746094 6.99805 1.29102V6.65234H1.63672C1.0918 6.65234 0.634766 7.10059 0.634766 7.6543C0.634766 8.20801 1.0918 8.65625 1.63672 8.65625Z" fill="#287cff"/>
@@ -18,25 +18,38 @@ import router from "@/router/index.js";
   </div>
   </div>
 <div class="mx-4">
-  <h1 class="font-Poppins font-semibold text-3xl text-black mb-3">Albums</h1>
+  <h1 class="font-SFDisplay font-bold text-3xl text-white mb-3">Albums</h1>
   <hr class="border-[#d8d8d842] my-2">
 
-  <h2 class="font-Poppins font-semibold text-xl text-black mb-3">Mes albums</h2>
-
+  <div class="flex items-center justify-between mb-3">
+  <h2 class="font-SFDisplay font-bold text-xl text-white">Mes albums</h2>
+    <span class="font-SFDisplay font-medium text-[#287cff]">Tout afficher</span>
+  </div>
   <div class="grid grid-cols-2 gap-4 justify-items-center">
-    <router-link to="/albums/gallery">
-      <div class="bg-classique rounded-lg p-4 h-[100px] w-[105px] border-black border-4 border-solid cursor-pointer">
+    <router-link class="no-underline cursor-pointer flex flex-col" to="/albums/gallery">
+      <div class="bg-classique rounded-lg p-4 h-[100px] w-[105px] cursor-pointer mb-2">
       </div>
+      <p class="font-SFDisplay text-white text-[16px]">Récentes</p>
+      <p class="font-SFDisplay text-[#9e9e9e] text-[14px]">641</p>
     </router-link>
-    <div class="bg-montagne h-[100px] w-[105px] border-black border-4 border-solid rounded-lg p-4">
+
+    <router-link class="no-underline cursor-pointer" to="/albums/montain">
+    <div class="bg-montagne h-[100px] w-[105px] rounded-lg p-4 mb-2">
 
     </div>
+      <p class="font-SFDisplay text-white text-[16px]">Virée en montagne</p>
+      <p class="font-SFDisplay text-[#9e9e9e] text-[14px]">25</p>
+    </router-link>
 
-    <div class="bg-papillon h-[100px] w-[105px] border-black border-4 border-solid rounded-lg p-4">
+    <router-link class="no-underline cursor-pointer" to="/albums/montain">
+    <div class="bg-papillon h-[100px] w-[105px] rounded-lg p-4 mb-2">
 
     </div>
+      <p class="font-SFDisplay text-white text-[16px]">Papillon</p>
+      <p class="font-SFDisplay text-[#9e9e9e] text-[14px]">5</p>
+    </router-link>
 
-    <div class="bg-black h-[100px] w-[105px] border-black border-4 border-solid rounded-lg p-4">
+    <div class="bg-black h-[100px] w-[105px] border-black border-4 border-solid rounded-lg p-4 mb-2">
 
     </div>
   </div>

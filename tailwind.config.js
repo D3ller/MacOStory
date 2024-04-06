@@ -17,6 +17,7 @@ export default {
       fontFamily: {
         Noto: 'Noto Color Emoji, sans-serif',
         Poppins: 'Poppins, sans-serif',
+        SFDisplay: 'SF PRO Display, sans-serif',
       }
     },
   },

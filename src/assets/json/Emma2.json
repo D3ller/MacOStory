@@ -1,5 +1,20 @@
 [
   {
+    "personne": "emma",
+    "text": "on se voit plus tard",
+    "direction": "left"
+  },
+  {
+    "personne": "thomas",
+    "text": "ça marche",
+    "direction": "right"
+  },
+  {
+    "personne": "emma",
+    "text": "bye bonne nuit",
+    "direction": "left"
+  },
+  {
     "speaker": "Emma",
     "text": "Hé, qu'est-ce que tu fais ? Je t'attends.",
     "direction": "left"

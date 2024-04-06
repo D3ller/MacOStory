@@ -5,7 +5,7 @@ const props = defineProps(['direction', 'content', 'img'])
 <template>
   <div class="w-full flex justify-start mt-3" v-if="direction === 'left'">
     <div class="message ml-1">
-      <div class="bg-[#E9E9EB] ml-1 rounded-xl p-2">
+      <div class="text-white ml-1 rounded-xl p-2 bg-[#323232]">
         <p v-if="content">{{content}}</p>
         <img v-if="img" :src="img" alt="img" class="w-40 h-40 object-cover rounded-xl" />
       </div>
@@ -19,7 +19,7 @@ const props = defineProps(['direction', 'content', 'img'])
 
   <div class="w-full flex justify-end mt-3" v-if="direction === 'right'">
     <div class="message mr-1">
-      <div class="bg-[#0078FF] mr-1 rounded-xl p-2">
+      <div class="bg-[#0078FF] text-white mr-1 rounded-xl p-2">
         <p>{{content}}</p>
         <img v-if="img" :src="img" alt="img" class="w-40 h-40 object-cover rounded-xl" />
       </div>

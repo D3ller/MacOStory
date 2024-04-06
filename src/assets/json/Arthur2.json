@@ -1,5 +1,30 @@
 [
   {
+    "personne": "Arthur",
+    "text": "tu pourrais m’aider pour le cours de math",
+    "direction": "left"
+  },
+  {
+    "personne": "Thomas",
+    "text": "Demande plutôt à emma elle a eu une bonne note lors du dernier partiel",
+    "direction": "right"
+  },
+  {
+    "personne": "Arthur",
+    "text": "Oui tu as raison je vais faire comme ça",
+    "direction": "left"
+  },
+  {
+    "personne": "Thomas",
+    "text": "ok a plus",
+    "direction": "right"
+  },
+  {
+    "personne": "Arthur",
+    "text": "A plus",
+    "direction": "left"
+  },
+  {
     "speaker": "Arthur",
     "text": "C'était vraiment une soirée de dingue hier !",
     "direction": "left"
@@ -46,7 +71,7 @@
   },
   {
     "speaker": "Thomas",
-    "text": "Mec Y a des photos que j'ai jamais prises, et j'ai une deuxième localisation qui vient d'apparaître sur mon ordi à côté de la mienne.",
+    "text": "Mec Y a des photos que j'ai jamais prises, et j'ai une deuxième localisation qui vient d'apparaître sur mon tel à côté de la mienne.",
     "direction": "right"
   },
   {
@@ -96,7 +121,7 @@
   },
   {
     "speaker": "Thomas",
-    "text": "*Crie* Il est rentré ! *Bruit de coupure téléphone*",
+    "text": "Il est rentré !",
     "direction": "right"
   },
   {

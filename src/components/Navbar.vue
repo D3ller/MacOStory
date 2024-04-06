@@ -50,9 +50,10 @@ var icons = ref([
   background-color: #ffffff66;
   padding: .3rem;
   border-radius: 1.2rem;
-  width: fit-content;
+  width: 80%;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   transition: transform .3s ease;
 }
 

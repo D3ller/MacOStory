@@ -75,7 +75,7 @@ onMounted(() => {
 
 
     <div class="p-2">
-        <div v-if="store.seeLocalizations && store.seePhoto" class="flex justify-between px-1 items-center">
+        <div v-if="store.Localize" class="flex justify-between px-1 items-center">
           <img class="w-8 h-8" src="/RoundedPhone.png" alt="">
           <div class="flex flex-col">
             <h2 class="m-0 font-Poppins text-[14px]">Iphone de Thomas (1)</h2>

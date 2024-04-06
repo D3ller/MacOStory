@@ -12,10 +12,11 @@
           v-if="cell.app"
           draggable="true"
           @dragstart="handleDragStart(cell, $event)"
-          class="app"
+          class="app flex flex-col font-SFDisplay text-[12px]"
           @click="router.push({ name: cell.app.name})"
       >
         <img :src="cell.app.src" :alt="cell.app.name">
+        <p>{{cell.app.name}}</p>
       </div>
     </div>
   </div>
@@ -32,13 +33,13 @@ import router from "@/router/index.js";
 
 const apps = [
   { id: 1, name: 'Safari', src: '/app/safari-2021-06-02.png' },
-  { id: 2, name: 'calc', src: '/app/calculator-2021-04-29.png' },
+  { id: 2, name: 'Calculatrice', src: '/app/calculator-2021-04-29.png' },
   {id: 3, name: 'Maps', src: '/app/maps.png'},
-  {id: 4, name: 'notes', src: '/app/notes-2021-05-25.png'},
+  {id: 4, name: 'Notes', src: '/app/notes-2021-05-25.png'},
   {id: 5, name: 'Systeme', src: '/app/system-preferences-2021-06-03.png'},
   {id: 6, name: 'App store', src: '/app/app-store-2021-04-22.png'},
-  {id: 7, name: 'Calendar', src: '/app/calendar-2021-04-29.png'},
-  {id: 8, name: 'Reminders', src: '/app/reminders-2021-05-28.png'},
+  {id: 7, name: 'Calendrier', src: '/app/calendar-2021-04-29.png'},
+  {id: 8, name: 'Rappels', src: '/app/reminders-2021-05-28.png'},
   {id: 8, name: 'Instagram', src: '/app/Instagram.png'},
   {id: 9, name: 'Contacts', src: '/app/Contacts.png'},
 
@@ -101,6 +102,7 @@ const handleDragOver = (event) => {
   padding: 2px;
   justify-items: center;
   @apply pt-6;
+  row-gap: 20px;
 }
 
 .grid-cell {

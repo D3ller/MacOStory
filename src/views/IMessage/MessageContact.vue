@@ -1,13 +1,9 @@
 <template>
+  <div class="h-full w-full bg-black">
   <header class="font-Poppins px-3">
     <nav class="flex justify-between my-3">
       <div>
-        <a href="#" class="edit text-[#3478F6] "><b>Edit</b></a>
-      </div>
-      <div>
-        <p>
-          <b>Messages</b>
-        </p>
+        <a href="#" class="edit text-[#3478F6] font-SFDisplay">Modifier</a>
       </div>
       <div>
         <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,34 +11,60 @@
         </svg>
       </div>
     </nav>
-    <div class="flex justify-between items-center relative mt-2">
-      <div class="absolute pl-2">
+
+    <h2 class="font-SFDisplay font-bold my-2 text-white">Message</h2>
+
+    <div class="flex justify-between items-center relative mt-2 bg-[#1c1c1e] rounded-lg px-2 py-1">
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7.29248 13.7466C8.67871 13.7466 9.95703 13.2983 11.0029 12.5513L14.9375 16.4858C15.1201 16.6685 15.3608 16.7598 15.6182 16.7598C16.1577 16.7598 16.5396 16.3447 16.5396 15.8135C16.5396 15.5645 16.4565 15.332 16.2739 15.1494L12.3643 11.2314C13.186 10.1523 13.6758 8.81592 13.6758 7.36328C13.6758 3.85205 10.8037 0.97998 7.29248 0.97998C3.78125 0.97998 0.90918 3.85205 0.90918 7.36328C0.90918 10.8745 3.78125 13.7466 7.29248 13.7466ZM7.29248 12.3687C4.55322 12.3687 2.28711 10.1025 2.28711 7.36328C2.28711 4.62402 4.55322 2.35791 7.29248 2.35791C10.0317 2.35791 12.2979 4.62402 12.2979 7.36328C12.2979 10.1025 10.0317 12.3687 7.29248 12.3687Z" fill="#3C3C43" fill-opacity="0.6"/>
+          <path d="M7.29248 13.7466C8.67871 13.7466 9.95703 13.2983 11.0029 12.5513L14.9375 16.4858C15.1201 16.6685 15.3608 16.7598 15.6182 16.7598C16.1577 16.7598 16.5396 16.3447 16.5396 15.8135C16.5396 15.5645 16.4565 15.332 16.2739 15.1494L12.3643 11.2314C13.186 10.1523 13.6758 8.81592 13.6758 7.36328C13.6758 3.85205 10.8037 0.97998 7.29248 0.97998C3.78125 0.97998 0.90918 3.85205 0.90918 7.36328C0.90918 10.8745 3.78125 13.7466 7.29248 13.7466ZM7.29248 12.3687C4.55322 12.3687 2.28711 10.1025 2.28711 7.36328C2.28711 4.62402 4.55322 2.35791 7.29248 2.35791C10.0317 2.35791 12.2979 4.62402 12.2979 7.36328C12.2979 10.1025 10.0317 12.3687 7.29248 12.3687Z" fill="#8e8e93" fill-opacity="1"/>
         </svg>
-      </div>
 
-      <input type="text" placeholder="Search" class="px-7 box-border w-full h-11 bg-slate-200 rounded-xl">
 
-      <div class="absolute right-0 pr-2">
+      <input type="text" placeholder="Recherche" class="indent-2.5 text-base box-border border-0 w-full bg-transparent font-SFDisplay focus:text-white text-white focus:outline-0" @input="searchContact($event.target.value)">
+
         <svg width="13" height="19" viewBox="0 0 13 19" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6.4668 12.1816C8.11865 12.1816 9.23096 10.9448 9.23096 9.17676V3.62354C9.23096 1.84717 8.11865 0.618652 6.4668 0.618652C4.80664 0.618652 3.69434 1.84717 3.69434 3.62354V9.17676C3.69434 10.9448 4.80664 12.1816 6.4668 12.1816ZM0.523438 9.30957C0.523438 12.5635 2.67334 14.8462 5.83594 15.1118V17.0459H2.75635C2.40771 17.0459 2.12549 17.3281 2.12549 17.6768C2.12549 18.0254 2.40771 18.2993 2.75635 18.2993H10.1689C10.5176 18.2993 10.7998 18.0254 10.7998 17.6768C10.7998 17.3281 10.5176 17.0459 10.1689 17.0459H7.08936V15.1118C10.2603 14.8462 12.4019 12.5635 12.4019 9.30957V7.62451C12.4019 7.27588 12.1279 7.00195 11.7793 7.00195C11.4307 7.00195 11.1484 7.27588 11.1484 7.62451V9.25977C11.1484 12.0903 9.30566 13.9663 6.4668 13.9663C3.61963 13.9663 1.77686 12.0903 1.77686 9.25977V7.62451C1.77686 7.27588 1.50293 7.00195 1.146 7.00195C0.797363 7.00195 0.523438 7.27588 0.523438 7.62451V9.30957Z" fill="#8E8E93"/>
         </svg>
-      </div>
     </div>
   </header>
-  <div class="mt-3">
+  <div class="mt-3 max-h-[480px] overflow-y-auto contacts">
     <Contact nom="Arthur"/>
     <Contact nom="Emma"/>
+    <Contact nom="Maman"/>
+    <Contact nom="Amazon"/>
+    <Contact nom="Richard"/>
+    <Contact nom="Apple"/>
+    <Contact nom="38015"/>
+
+  </div>
   </div>
 </template>
 
 <script setup>
 import Contact from "@/components/IMessage/Contact.vue";
+
+import { onMounted } from "vue";
+
+onMounted(() => {
+
+})
+
+function searchContact(value) {
+  console.log(value)
+}
 </script>
 
 <style scoped>
 .edit {
   text-decoration: none;
+}
+
+.contacts::-webkit-scrollbar {
+  width: 5px;
+}
+
+.contacts::-webkit-scrollbar-thumb {
+  background-color: #4B5563;
+  border-radius: 10px;
 }
 </style>

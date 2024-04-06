@@ -40,13 +40,23 @@ const router = createRouter({
     },
     {
       path: '/calc',
-      name: 'calc',
+      name: 'Calculatrice',
       component: Calc
     },
     {
+      path: '/instagram',
+      name: 'Instagram',
+      component: () => import('../views/Instagram.vue')
+    },
+    {
       path: '/notes',
-      name: 'notes',
+      name: 'Notes',
       component: Notes
+    },
+    {
+      path: '/reglages',
+      name: 'Systeme',
+      component: () => import('../views/Reglage.vue')
     }
   ]
 })

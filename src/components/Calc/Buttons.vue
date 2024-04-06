@@ -1,14 +1,14 @@
 <template>
-  <a href="#">
-    <div class="btn" :style="{ backgroundColor: colors }">
-      {{content}}
-    </div>
-  </a>
+  <button class="btn"
+      :style="{backgroundColor: colors}"
+  >
+    {{ content }}
+  </button>
 </template>
 
 <style scoped lang="postcss">
 .btn {
-  @apply w-[70px] h-[70px] rounded-full flex justify-center items-center font-Poppins text-4xl
+  @apply w-[70px] h-[70px] rounded-full flex justify-center items-center font-Poppins text-4xl text-white border-0
 }
 
 a {

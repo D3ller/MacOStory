@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center w-full mt-3 absolute z-10 font-Poppins notif">
+  <div class="flex justify-center w-full mt-3 absolute z-10 font-SFDisplay text-white notif">
     <div class="flex w-4/5 h-20 bg-blur rounded-2xl shadow-2xl">
       <div class="m-2 flex items-center">
         <img src="/app/message.png" class="w-16" v-if="!store.App" />
